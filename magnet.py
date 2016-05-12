@@ -12,7 +12,9 @@ args = parser.parse_args()
 
 all_shows = api.get_shows()
 
-matched_shows = {show_id: show_name for show_id, show_name in all_shows.items() if args.name in show_name.lower()}
+query = args.name.lower()
+
+matched_shows = {show_id: show_name for show_id, show_name in all_shows.items() if query in show_name.lower()}
 
 if len(matched_shows) == 0:
 	print 'No matching shows found'
