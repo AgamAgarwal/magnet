@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import eztvit
 import argparse
 import sys
